@@ -23,7 +23,7 @@ npm run dev
 
 App URL: `http://localhost:5173`
 
-Backend API is expected at `http://localhost:8080/api` by default.
+Backend API calls use `/api` and are proxied by Vite to `http://localhost:8080` by default.
 
 To override:
 ```bash
