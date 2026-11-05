@@ -1,45 +1,60 @@
-# DTS Developer Technical Test
+# HMCTS DTS Developer Challenge Solution
 
-## Objective
-To assess your ability to build a simple API and frontend using best coding practices.
+This repository contains a complete task management solution with:
+- `backend/`: Java Spring Boot API
+- `frontend/`: React JavaScript web app
 
-## Scenario
-HMCTS requires a new system to be developed so caseworkers can keep track of their tasks. Your technical test is to develop that new system so caseworkers can efficiently manage their tasks.
+The app supports create, read, update status, and delete for tasks.
 
-## Task Requirements
+## Tech Stack
+- Backend: Java 17, Spring Boot, JPA, H2, JUnit/MockMvc
+- Frontend: React (JavaScript), Vite, Vitest, Testing Library
 
-### Backend API
-The backend should be able to:
-- Create a task with the following properties:
-  - Title
-  - Description (optional field)
-  - Status
-  - Due date/time
-- Retrieve a task by ID
-- Retrieve all tasks
-- Update the status of a task
-- Delete a task
+## Project Structure
+```
+.
+├── backend
+└── frontend
+```
 
-### Frontend Application
-The frontend should be able to:
-- Create, view, update, and delete tasks
-- Display tasks in a user-friendly interface
+## Run Backend
+```bash
+cd backend
+mvn spring-boot:run
+```
 
-## Technical Requirements
-Here are a few starter repositories if you would like to use our tech stack:
-- [Backend Starter Repo](https://github.com/hmcts/hmcts-dev-test-backend)
-- [Frontend Starter Repo](https://github.com/hmcts/hmcts-dev-test-frontend)
+- API base URL: `http://localhost:8080/api`
+- Swagger UI: `http://localhost:8080/swagger-ui.html`
 
-You can use any language you are comfortable with or our own stack:
-- **Backend**: Any language or framework of your choice
-- **Frontend**: Any language or framework of your choice
-- Implement **unit tests**
-- Store data in a **database**
-- Include **validation and error handling**
-- **Document API endpoints**
+## Run Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-## Submission Guidelines
-- Create repositories on GitHub and add add the links to your application
-- Include a helpful `README.md`!
+- Frontend URL: `http://localhost:5173`
+- Default API URL used by frontend: `http://localhost:8080/api`
 
-Happy coding!
+## Run Tests
+```bash
+cd backend
+mvn test
+```
+
+```bash
+cd frontend
+npm install
+npm test
+```
+
+## API Endpoints
+- `POST /api/tasks`
+- `GET /api/tasks`
+- `GET /api/tasks/{id}`
+- `PATCH /api/tasks/{id}/status`
+- `DELETE /api/tasks/{id}`
+
+## Submission Notes
+- Keep repository content name-blind (avoid personal details in code/docs).
+- Share the repository link in the coding challenge submission field.
