@@ -54,7 +54,3 @@ npm test
 - `GET /api/tasks/{id}`
 - `PATCH /api/tasks/{id}/status`
 - `DELETE /api/tasks/{id}`
-
-## Submission Notes
-- Keep repository content name-blind (avoid personal details in code/docs).
-- Share the repository link in the coding challenge submission field.
