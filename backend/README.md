@@ -1,6 +1,6 @@
 # Backend - HMCTS Task Manager
 
-Spring Boot REST API for the DTS developer challenge.
+Spring Boot REST API for task management.
 
 ## Features
 - Create task
